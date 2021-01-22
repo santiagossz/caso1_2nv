@@ -1,12 +1,22 @@
 .pokeball {
-	background: url("../img/pokebola.jpg") no-repeat fixed center;
-	background-size: cover;
+	background: url("../img/top.png") center,
+		url("../img/bottom.png") center top 345px, black;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 	.title {
 		margin-top: 4rem;
 		color: #fccf00;
-		text-align: center;
 		font-size: 4.5rem;
 		font-weight: bolder;
 		text-shadow: -3.5px 2.5px 1px #0f5caf, 3.5px -2.5px 1px #0f5caf;
+	}
+	.open {
+		width: 90px;
+		height: 20px;
+		background-color: black;
+		opacity: 0;
 	}
 }

@@ -1,0 +1,16 @@
+.list {
+	background: url("../img/top.png") center top 92.5%,
+		url("../img/bottom.png") center bottom -92.5% fixed, black;
+	transition: background-position 0.3s ease;
+	background-repeat: no-repeat;
+	.title {
+		display: none;
+	}
+	.noOpen {
+		width: 150px;
+		height: 20px;
+		background-color: black;
+		opacity: 0;
+		margin-left: 42.5%;
+	}
+}
