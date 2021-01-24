@@ -1,0 +1,50 @@
+.front,
+.back {
+	height: 250px;
+	width: 130%;
+	// margin: 0 15px;
+	border-radius: 2%;
+	border: none;
+	cursor: pointer;
+
+	h3 {
+		color: white;
+		position: relative;
+		margin-top: 70%;
+		text-shadow: -3.5px 2.5px 1px #0f5caf, 3.5px -2.5px 1px #0f5caf;
+		margin-right: 7.5%;
+		text-align: center;
+		font-size: 2em;
+	}
+}
+.back {
+	cursor: unset;
+}
+
+$pokemon: (
+	"Arbok": url("../img/arbok.png") center,
+	"Ekans": url("../img/ekans.jpg"),
+	"Fearow": url("../img/fearow.jpg"),
+	"Nidorina": url("../img/nidorina.jpg") center,
+	"Pikachu": url("../img/pikachu.jpg") center,
+	"Raichu": url("../img/raichu.jpg") center,
+	"Sandshrew": url("../img/sandshrew.jpg") center,
+	"Sandslash": url("../img/sandslash.png") center,
+	"Spearow": url("../img/spearow.jpg") center,
+);
+@each $pk, $url in $pokemon {
+	##{$pk} {
+		background: $url;
+		background-size: cover;
+
+		button,
+		p {
+			opacity: 0;
+		}
+	}
+	#one-#{$pk} {
+		background: url("../img/pokebola.jpg");
+		background-position: right 47.5% top 10%;
+		background-size: cover;
+	}
+}

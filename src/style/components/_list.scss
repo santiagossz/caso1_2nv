@@ -1,16 +1,53 @@
+@import "./pokemon";
+
 .list {
-	background: url("../img/top.png") center top 92.5%,
-		url("../img/bottom.png") center bottom -92.5% fixed, black;
-	transition: background-position 0.3s ease;
+	background: url("../img/top.png") center top -182.5%,
+		url("../img/bottom.png") center bottom -92.5% fixed,
+		url("../img/list.jpg") top;
 	background-repeat: no-repeat;
+	transition: background-position 0.3s ease;
+
 	.title {
 		display: none;
 	}
-	.noOpen {
+	.close {
 		width: 150px;
 		height: 20px;
 		background-color: black;
 		opacity: 0;
 		margin-left: 42.5%;
+	}
+	.pokemon {
+		text-align: center;
+		padding: 75px;
+		color: #fccf00;
+		font-size: 3rem;
+		font-weight: bolder;
+		text-shadow: -3.5px 2.5px 1px #0f5caf, 3.5px -2.5px 1px #0f5caf;
+		animation: transition 1.25s;
+	}
+
+	.carousel {
+		margin-left: 3%;
+		margin-right: 3%;
+		animation: transition 1.25s;
+		button {
+			background-color: rgba(235, 16, 16, 0.1);
+			color: white;
+			&:hover:enabled,
+			&:focus:enabled {
+				color: rgba(103, 58, 183, 1);
+				background-color: rgba(1, 0, 2, 0.35);
+			}
+		}
+	}
+}
+
+@keyframes transition {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }

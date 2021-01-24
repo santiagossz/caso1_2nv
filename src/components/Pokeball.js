@@ -30,13 +30,13 @@ const Pokeball = () => {
 					background == "pokeball"
 						? setBackground("list")
 						: window.location.reload(false);
-					open == "open" ? setOpen("noOpen") : setOpen("open");
+					open == "open" ? setOpen("close") : setOpen("open");
 				}}
 			>
 				{""}
 			</button>
 
-			{/* <List /> */}
+			<List />
 		</div>
 	);
 };
