@@ -162,8 +162,18 @@
   font-size: 2rem;
 }
 
-.front .boton,
-.back .boton {
+.front form,
+.back form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.front form .boton,
+.back form .boton {
   font-size: large;
   bottom: 10%;
   position: fixed;
@@ -199,7 +209,9 @@
 
 .list .title,
 .list .boton-cerrar,
-.list .pokemon_abilities {
+.list .pokemon_abilities,
+.list .p_abilities,
+.list .container {
   display: none;
 }
 
@@ -306,7 +318,9 @@
 .abilities .title,
 .abilities .pokemon,
 .abilities .close,
-.abilities .carousel {
+.abilities .carousel,
+.abilities .front,
+.abilities .back {
   display: none;
 }
 
@@ -328,6 +342,12 @@
   font-size: 3rem;
   font-weight: bolder;
   text-shadow: -3.5px 2.5px 1px #0f5caf, 3.5px -2.5px 1px #0f5caf;
+}
+
+.abilities .p_abilities,
+.abilities .container {
+  display: block;
+  color: white;
 }
 
 * {
