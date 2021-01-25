@@ -1,0 +1,40 @@
+@media screen and (max-height: 680px) {
+	.list {
+		background: url("../img/top.png") center top -202.5%,
+			url("../img/bottom.png") center bottom -127.5% fixed,
+			url("../img/list.jpg") top;
+		background-repeat: no-repeat;
+		transition: background-position 0.3s ease;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.list {
+		background: url("../img/top.png") center top -142.5%,
+			url("../img/bottom.png") center bottom -67.5% fixed,
+			url("../img/list.jpg") top;
+		background-repeat: no-repeat;
+		transition: background-position 0.3s ease;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 680px) {
+	.list {
+		background: url("../img/top.png") center top -265.5%,
+			url("../img/bottom.png") center bottom -127.5% fixed,
+			url("../img/list.jpg") top;
+		background-repeat: no-repeat;
+		transition: background-position 0.3s ease;
+		.pokemon {
+			padding: 20px !important;
+		}
+	}
+}
+@media screen and (min-width: 650px) and (max-width: 780px) {
+	.list {
+		background: url("../img/top.png") center top -142.5%,
+			url("../img/bottom.png") center bottom -127.5% fixed,
+			url("../img/list.jpg") top;
+		background-repeat: no-repeat;
+		transition: background-position 0.3s ease;
+	}
+}

@@ -1,13 +1,14 @@
-@import "./pokemon";
-
+@import "./carousel";
 .list {
-	background: url("../img/top.png") center top -182.5%,
+	background: url("../img/top.png") center top -201.5%,
 		url("../img/bottom.png") center bottom -92.5% fixed,
 		url("../img/list.jpg") top;
 	background-repeat: no-repeat;
 	transition: background-position 0.3s ease;
 
-	.title {
+	.title,
+	.boton-cerrar,
+	.pokemon_abilities {
 		display: none;
 	}
 	.close {
@@ -19,7 +20,7 @@
 	}
 	.pokemon {
 		text-align: center;
-		padding: 75px;
+		padding: 70px;
 		color: #fccf00;
 		font-size: 3rem;
 		font-weight: bolder;
@@ -51,3 +52,5 @@
 		opacity: 1;
 	}
 }
+
+@import "./screen";

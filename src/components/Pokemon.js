@@ -1,36 +1,37 @@
 import React, { useState } from "react";
-import ReactCardFlip from "react-card-flip";
+import Flip from "./Flip";
+import axios from "axios";
 
 const Pokemon = ({ project }) => {
-	const [isFlipped, setIsFlipped] = useState(false);
-	const [front, setFront] = useState("front");
+	const [pokemon, setPokemon] = useState("pikachu");
+	const [pokemonData, setPokemonData] = useState([]);
+	const [pokemonType, setPokemonType] = useState("");
+
+	const handleChange = () => {
+		setPokemon(project.title.toLowerCase());
+	};
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		getPokemon();
+	};
+	const getPokemon = async () => {
+		const toArray = [];
+		try {
+			const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
+			const res = await axios.get(url);
+			toArray.push(res.data);
+			setPokemonType(res.data.types[0].type.name);
+			setPokemonData(toArray);
+		} catch (e) {
+			console.log(e);
+		}
+	};
+	console.log(pokemonData);
+
 	return (
-		<ReactCardFlip isFlipped={isFlipped} flipDirection='horizontal'>
-			<div
-				className={front}
-				id={project.title}
-				onClick={() => {
-					setIsFlipped(!isFlipped);
-					setFront("back");
-				}}
-			>
-				<button>Ver Habilidades</button>
-				<p>Descripción Genérica</p>
-				<h3>{project.title}</h3>
-			</div>
-			<div
-				className={front}
-				id={`one-${project.title}`}
-				onClick={() => {
-					setIsFlipped(!isFlipped);
-					setFront("front");
-				}}
-			>
-				<button>Ver Habilidades</button>
-				<p>Descripción Genérica</p>
-				<h3>{project.title}</h3>
-			</div>
-		</ReactCardFlip>
+		<div>
+			<Flip project={project} />
+		</div>
 	);
 };
 

@@ -1,0 +1,41 @@
+@import "./pokemon";
+.front,
+.back {
+	height: 250px;
+	width: 185px;
+	border-radius: 2%;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	.name {
+		position: fixed;
+		bottom: 8%;
+		color: white;
+		text-shadow: -3.5px 2.5px 1px #0f5caf, 3.5px -2.5px 1px #0f5caf;
+		font-size: 2rem;
+	}
+	.boton {
+		font-size: large;
+		bottom: 10%;
+		position: fixed;
+		color: black !important;
+		background-color: rgba(255, 255, 255, 0.712) !important;
+		border: 2px solid #0f5caf;
+		border-radius: 2%;
+		text-shadow: -0.5px 0.5px 1px #0f5caf, 0.5px -0.5px 1px #0f5caf;
+		padding: 0 5% 1% 5%;
+		cursor: pointer;
+	}
+	.dscrp {
+		position: fixed;
+		font-weight: bolder;
+		color: white;
+		text-shadow: -3.5px 2.5px 1px #0f5caf, 3.5px -2.5px 1px #0f5caf;
+		top: 30%;
+		text-align: center;
+	}
+}
+
+.back {
+	cursor: unset;
+}
