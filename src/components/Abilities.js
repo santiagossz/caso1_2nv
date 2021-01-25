@@ -5,7 +5,7 @@ const Abilities = (props) => {
 
 	return props.pokemonData.map((data) => {
 		return (
-			<div>
+			<div className='abilities_card'>
 				<img src={data.sprites["front_default"]} />
 				{data.abilities.map((ability, index) => {
 					return (

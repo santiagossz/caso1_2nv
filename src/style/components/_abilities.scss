@@ -3,13 +3,13 @@
 		url("../img/list.jpg") top;
 	background-repeat: no-repeat;
 	min-height: 100vh;
-
+	display: flex;
+	justify-content: center;
+	// align-items: center;
 	.title,
 	.pokemon,
 	.close,
-	.carousel,
-	.front,
-	.back {
+	.carousel {
 		display: none;
 	}
 	.boton-cerrar {
@@ -31,10 +31,16 @@
 		font-weight: bolder;
 		text-shadow: -3.5px 2.5px 1px #0f5caf, 3.5px -2.5px 1px #0f5caf;
 	}
-	.p_abilities,
-	.container {
+	.abilities_card {
 		display: block;
 		color: white;
+		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+			url("../img/pokebola.jpg") center;
+		background-size: cover;
+		top: 25%;
+	}
+	p {
+		text-align: center;
 	}
 }
 

@@ -15,7 +15,6 @@ const List = () => {
 
 	const [pokemon, setPokemon] = useState(" ");
 	const [pokemonData, setPokemonData] = useState([]);
-	const [pokemonType, setPokemonType] = useState("");
 
 	const handleChange = (e) => {
 		setPokemon(e);
@@ -31,7 +30,6 @@ const List = () => {
 			const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
 			const res = await axios.get(url);
 			toArray.push(res.data);
-			setPokemonType(res.data.types[0].type.name);
 			setPokemonData(toArray);
 		} catch (e) {
 			console.log(e);
@@ -48,9 +46,7 @@ const List = () => {
 				<i class='fas fa-times'></i>
 			</a>
 			<h3 className='pokemon_abilities'>Habilidades</h3>
-			<div className='p_abilities'>
-				<Abilities pokemonData={pokemonData} pokemonType={pokemonType} />
-			</div>
+			<Abilities pokemonData={pokemonData} />
 
 			<div className='carousel'>
 				<Carousel breakPoints={breakPoints}>
