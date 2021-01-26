@@ -19,7 +19,7 @@
 		"rodal": "^1.8.1",
 		"styled-components": "^5.2.1",
 		"web-vitals": "^0.2.4",
-		"homepage": "https://santiagossz.github.io/caso1_2nv"
+		"homepage": "https://santiagossz.github.io/caso1_2nvgit push -u origin gh-pages:gh-pages"
 	},
 	"scripts": {
 		"start": "react-scripts start",
